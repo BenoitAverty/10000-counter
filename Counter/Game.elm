@@ -39,9 +39,12 @@ update msg game = game
 
 playerView : Player -> Html Msg
 playerView (name, scores) = div [class "player"]
-            [ h1 [] [ text name ] ] ++ (List.map (\s -> p [] s) scores)
+            (
+                [ h1 [] [ text name ] ] ++ (List.map (\s -> p [] [text (toString s)]) scores)
+            )
 
 view : Game -> Html Msg
 view model =
     div [ id "game" ]
-        (List.map playerView model)
+        ((input [] []) :: 
+        (List.map playerView model))

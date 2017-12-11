@@ -31,7 +31,7 @@ type alias Model =
 
 initialModel : Model
 initialModel = 
-    { players = Array.fromList [Player "Benoit" [(0, Default)], Player "Marie" [(0, Default)]]
+    { players = Array.fromList [Player "Benoit" [], Player "Marie" []]
     , turn = 0
     , buttonInputModel = ButtonInput.initialModel
     }

@@ -18,8 +18,8 @@ levelView : Level -> Html Msg
 levelView level = 
     case level of
         (s, Default) -> ul [ class "defaultScore" ] [ text (toString s) ]
-        (s, Strike) -> ul [ class "strikeScore" ] [ text (toString s), span [] [ text " ·" ] ]
-        (s, CrossedOff) -> ul [ class "crossedOffScore" ] [ text (toString s) ]
+        (s, Strike) -> ul [ class "strikeScore background-danger" ] [ text (toString s), span [ class "text-danger" ] [ text " ·" ] ]
+        (s, CrossedOff) -> ul [ class "crossedOffScore text-muted" ] [ del [] [ text (toString s) ] ]
 
 
 scoresView : List Level -> Html Msg

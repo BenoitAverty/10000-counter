@@ -1,3 +1,5 @@
+module Counter exposing (..)
+
 import Html exposing (beginnerProgram)
 
 import Model exposing (initialModel)
